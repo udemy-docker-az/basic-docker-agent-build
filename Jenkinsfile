@@ -1,11 +1,11 @@
 pipeline {
-  agent{
-    docker{
+  agent {
+    docker {
       image: 'ubuntu:latest'
     }
   }
-  stages{
-    stage('test'){
+  stages {
+    stage('test') {
       steps {
         sh "echo"
       }
