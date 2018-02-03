@@ -1,5 +1,5 @@
 pipeline {
-  agent a
+  agent none
   stages {
     stage('npm version') {
       agent {
