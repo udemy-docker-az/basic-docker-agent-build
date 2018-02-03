@@ -13,7 +13,7 @@ pipeline {
     stage('docker container script'){
       steps{
         script{
-          def nodeLatest = docker.pull("node:latest")
+          def nodeLatest = docker.image("node:latest")
 
           nodeLatest.inside {
             sh 'node -v'
