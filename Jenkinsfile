@@ -10,6 +10,16 @@ pipeline {
         sh "npm -v"
       }
     }
+    stage('dockerfile npm version') {
+      agent {
+          dockerfile true
+      }
+      steps {
+        sh "node -v"
+        sh "npm -v"
+        sh "curl --version"
+      }
+    }
     stage('docker container script'){
       steps{
         script{
